@@ -1,0 +1,247 @@
+/* ---------------------- Section top-inner ---------------------- */
+section.top-inner {
+    padding: 35px 0;
+    text-align: center;
+    background: #000;
+    .title {
+        @include f-b;
+        font-size: 46px;
+        color: #fff;
+    }
+
+    @media only screen and (max-width : $lw) {
+        padding: 30px 0;
+        .title {
+            font-size: 41px;
+        }
+    }
+    @media only screen and (max-width : $mw) {
+        padding: 25px 0;
+        .title {
+            font-size: 35px;
+        }
+    }
+}
+/* --------------------- /Section top-inner ---------------------- */
+
+/* ---------------------- Section login ---------------------- */
+section.login {
+    min-height: 550px;
+    background: #fff;
+    .parts {
+        margin: 0 -80px;
+        .part {
+            padding: 0 80px;
+        }
+    }
+    .content {
+        margin-top: 35px;
+    }
+    .um-form-cont {
+        margin-top: 15px;
+    }
+
+    @media only screen and (max-width : $mw) {
+        .content {
+            margin-top: 25px;
+        }
+    }
+}
+/* --------------------- /Section login ---------------------- */
+
+.section-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    .parts {
+        height: 100%;
+        .part {
+            @include flex-center;
+            overflow: hidden;
+            img {
+                height: 100%;
+            }
+        }
+    }
+
+    @media only screen and (max-width : $mw) {
+        position: static;
+        .parts {
+            .part {
+                img {
+                    height: auto;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+
+.um-form-cont {
+    .um .um-form {
+        input {
+            @include f-r;
+            font-size: 23px !important;
+            color: #000;
+            background: #F1F1F1;
+            padding: 10px 25px !important;
+            height: auto !important;
+            border-radius: 25px;
+        }
+        .um-button {
+            @include f-b;
+            font-size: 23px;
+            color: #fff;
+            background: #DC3427;
+            border-radius: 8px;
+            padding: 16px 20px !important;
+        }
+
+        #um-submit-btn {
+            background: #1F1F1F;
+        }
+    }
+
+    @media only screen and (max-width : $mw) {
+        .um .um-form {
+            input {
+                font-size: 20px !important;
+                padding: 8px 15px !important;
+            }
+            .um-button {
+                font-size: 20px;
+                padding: 10px 15px !important;
+            }
+
+        }
+    }
+}
+
+
+/* ---------------------- Section post ---------------------- */
+section.post {
+    position: relative;
+	.title {
+		@include f-b;
+		font-size: 26px;
+		color: #353535;
+	}
+	.img-main {
+		width: 40%;
+		float: left;
+		margin-right: 50px;
+		margin-bottom: 50px;
+		
+		&.mobile {
+			display: none;
+		}
+		img {
+			width: 100%;
+			margin-top: 0;
+		}
+	}
+
+	.content {
+		.section-title {
+			margin-top: 0;
+			p {
+				margin-top: 0;
+			}
+		}
+
+
+	}
+
+	@media only screen and (max-width : $tw) {
+	
+	}
+
+	@media only screen and (max-width : $mw) { 
+
+		.img-main {
+			float: none;
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 0;
+			display: none;
+			&.mobile {
+				display: block;
+			}
+		}
+	}
+}
+/* --------------------- /Section post ---------------------- */
+
+/* ---------------------- Section profile ---------------------- */
+section.profile {
+    
+}
+/* --------------------- /Section profile ---------------------- */
+
+
+.um-profile-cont {
+    .um-profile-body, .um-profile {
+        max-width: 100% !important;
+    }
+    
+    .um .um-form {
+        .um-col-1 {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .um-field {
+                width: 31%;
+                padding: 25px 0 0 0;
+                &.um-field-block {
+                    width: 100%;
+                    .title {
+                        @include f-b;
+                        font-size: 32px;
+                        color: #000; 
+                    }
+                }
+            }
+        }
+        input, textarea {
+            @include f-r;
+            font-size: 18px !important;
+            color: #000;
+            background: #fff;
+            padding: 10px 15px !important;
+            height: auto !important;
+            border-radius: 8px;
+            border: none !important;
+        }
+        .um-button {
+            @include f-b;
+            font-size: 23px;
+            color: #fff;
+            background: #DC3427;
+            border-radius: 8px;
+            padding: 16px 20px !important;
+        }
+
+        #um-submit-btn {
+            background: #1F1F1F;
+        }
+    }
+
+    @media only screen and (max-width : $mw) {
+        .um .um-form {
+            input {
+                font-size: 20px !important;
+                padding: 8px 15px !important;
+            }
+            .um-button {
+                font-size: 20px;
+                padding: 10px 15px !important;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,240 @@
+section {
+	width: 100%;
+	max-width: 1920px;
+	margin: auto;	
+	overflow: hidden;
+	position: relative;
+	padding: 75px 0;
+	background: #F5F5F5;
+	@media only screen and (max-width : $lw) {
+		padding: 65px 0;
+	}
+	@media only screen and (max-width : $tw) {
+		padding: 55px 0;
+	}
+	@media only screen and (max-width : $mw) {
+		padding: 35px 0;
+	}
+}
+
+.section-inner {
+	max-width: 1560px;
+	padding: 0 20px;
+	width: 100%;
+	margin: auto;
+	position: relative;
+	z-index: 2;
+	@media only screen and (max-width : $mw) {
+		padding: 0 10px;
+	}
+}
+
+.content {
+	@include f-r;
+	font-size: 18px;
+	color: #000;
+	line-height: 1.5;
+	p,ul,li,h1,h2,h3,h4,h5,img {
+		margin-top: 15px;
+	}
+
+	ul {
+		list-style: disc;
+    	padding-right: 25px;
+	}
+
+
+
+	img {
+		max-width: 100%;
+	}
+
+	@media only screen and (max-width : $mw) {
+		font-size: 16px;
+	}
+}
+
+.centered {
+	text-align: center;
+}
+
+.parts {
+	display: flex;
+	margin: 0 -45px;
+	&.ai-center {
+		align-items: center;
+	}
+	.part {
+		width: 50%;
+		padding: 0 45px;
+		position: relative;
+		&:nth-child(1) {
+		}
+		&:nth-child(2) {
+		}
+		.image {
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+
+	@media only screen and (max-width : $mw) {
+		flex-wrap: wrap;
+		.part {
+			width: 100%;
+			&:nth-child(2) {
+				margin-top: 25px;
+			}
+		}
+	}
+}
+
+.section-title {
+	@include f-r;
+	font-size: 46px;
+	color: #000;
+
+	strong {
+		@include f-b;
+		color: #DC372A;
+	}
+	@media only screen and (max-width : $tw) {
+		font-size: 40px;
+	}
+	@media only screen and (max-width : $mw) {
+		font-size: 35px;
+	}
+}
+.section-subtitle {
+	@include f-r;
+	font-size: 18px;
+	line-height: 1.5;
+	color: #000;
+	text-align: center;
+	margin-top: 25px;
+	@media only screen and (max-width : $tw) {
+		font-size: 18px;
+	}
+	@media only screen and (max-width : $mw) {
+		font-size: 16px;
+	}
+}
+
+.button {
+	@include f-b;
+	font-size: 23px;
+	color: #DC372A;
+	border-radius: 10px;
+	background: #F1F1F1;
+	padding: 10px 20px;
+	cursor: pointer;
+	transition:  background-color 0.25s, color 0.25s;
+	display: inline-block;
+	white-space: nowrap;
+
+	&.white {
+		background: #fff;
+	}
+	&:hover {
+		background: #DC372A;
+		color: #F1F1F1;
+	}
+
+	@media only screen and (max-width : $lw) {
+        font-size: 21px;
+    }
+	@media only screen and (max-width : $tw) {
+		padding: 10px 18px;
+        font-size: 19px;
+
+    }
+}
+
+.desktop {
+	display: block;
+}
+.mobile {
+	display: none;
+}
+
+@media only screen and (max-width : $mw) {
+	.desktop {
+		display: none;
+	}
+	.mobile {
+		display: block;
+	}
+}
+
+.loading:after {
+	display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    content: "\f1ce";
+    animation: fa-spin .75s linear infinite;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    color: #227BC9;
+    z-index: 2;
+}
+
+#sm_menu_ham {
+	float: left;
+	left: auto;
+	top: 11px;
+	left: 7px;
+	right: auto;
+	span {
+		background-color: #fff;
+		height: 3px;
+	}
+}
+
+.sm_menu_outer {
+	background: #000;
+	&.slide .mobile_menu .sub-menu {
+		background: #000;;
+		height: 800px;
+	}
+	.mobile_menu {
+		li {
+			border-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 20%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 80%, rgba(255, 255, 255, 0) 100%) 0 0 1 0;
+		}
+		li.hasChild > a, li.back a {
+			background-size: 20px !important;
+		}
+		a {
+			@include f-r;
+			 padding: 15px 15px;
+		}
+		.current_page_item {
+			>a {
+				@include f-b;
+			}
+		}
+	}
+}
+
+.sm_menu_outer.slide .mobile_menu li.hasChild > a {
+    background: url(../plugins/mmenu/images/next.png) no-repeat scroll 10px center / 5% auto;
+}
+
+.sm_menu_outer .mobile_menu li.back a {
+    padding: 20px 45px 20px 5px;
+    background: url(../plugins/mmenu/images/back.png) no-repeat scroll right 15px center / 5% auto;
+}
+
+.sm_menu_outer {
+    bottom: 0;
+    height: auto;
+    top: 45px;
+}
